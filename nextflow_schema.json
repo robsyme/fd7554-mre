@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/seqeralabs/fd7554-mre/main/nextflow_schema.json",
+  "title": "fd7554-mre pipeline parameters",
+  "description": "MRE testing whether nextflow_schema.json can default to repo-relative paths via ${projectDir}",
+  "type": "object",
+  "properties": {
+    "input_dir": {
+      "type": "string",
+      "description": "Directory containing input files",
+      "default": "${projectDir}/data/samples"
+    },
+    "reference_bed": {
+      "type": "string",
+      "description": "Path to the reference BED file",
+      "default": "${projectDir}/data/reference.bed"
+    },
+    "samplesheet": {
+      "type": "string",
+      "description": "Sample sheet CSV",
+      "default": "${projectDir}/examples/fastq.local.csv"
+    },
+    "outdir": {
+      "type": "string",
+      "description": "Directory where output files will be saved",
+      "default": "results"
+    }
+  }
+}
